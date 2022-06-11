@@ -5,7 +5,7 @@ import { Box, Typography, Badge, Paper } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Navbar = () => {
-  const cartQuantity = useSelector(state => state.cart.totalQuantity);
+  const cartQuantity = useSelector(state => state.cart.totalQuantity); // read values from store & subscribes to updates
 
   return (
     <Paper>
