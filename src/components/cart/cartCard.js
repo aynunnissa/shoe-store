@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { cartActions } from "../store/cart";
+import { cartActions } from "../../store/cart";
 
 import {
   Card,
@@ -10,8 +10,10 @@ import {
   Button,
 } from "@mui/material";
 
-const CartCard = id => {
+const CartCard = props => {
   const dispatch = useDispatch();
+
+  const { id, title, totalPrice, quantity } = props.item;
 
   function removeFromCartHandler() {
     dispatch(cartActions.removeItemFromCart(id));
@@ -21,28 +23,29 @@ const CartCard = id => {
     <Card sx={{ display: "flex" }}>
       <CardMedia
         component="img"
-        height="140"
+        height="auto"
         image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
         alt="shoes 1"
+        sx={{ width: "20%" }}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography variant="subtitle1">{quantity}</Typography>
+        <Typography variant="subtitle1" sx={{ color: "red" }}>
+          Rp{Number(totalPrice).toLocaleString()}
         </Typography>
+        <CardActions>
+          <Button
+            size="small"
+            onClick={removeFromCartHandler}
+            sx={{ textTransform: "none" }}
+          >
+            Remove from Cart
+          </Button>
+        </CardActions>
       </CardContent>
-      <CardActions>
-        <Button
-          size="small"
-          onClick={removeFromCartHandler}
-          sx={{ textTransform: "none" }}
-        >
-          Remove from Cart
-        </Button>
-      </CardActions>
     </Card>
   );
 };

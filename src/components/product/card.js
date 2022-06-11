@@ -10,17 +10,19 @@ import {
   Button,
 } from "@mui/material";
 
-const CardItem = () => {
+const CardItem = props => {
   const dispatch = useDispatch();
+
+  const { id, price, title, type } = props.product;
 
   function addToCartHandler() {
     dispatch(
       cartActions.addItemToCart({
-        id: 1,
-        price: 20000,
+        id: id,
+        price: price,
         quantity: 1,
-        name: "Nike xxx",
-        type: "Man's shoes",
+        title: title,
+        type: type,
       })
     );
   }
@@ -35,11 +37,13 @@ const CardItem = () => {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {type}
+        </Typography>
+        <Typography variant="subtitle1" sx={{ color: "red" }}>
+          Rp{Number(price).toLocaleString()}
         </Typography>
       </CardContent>
       <CardActions>
