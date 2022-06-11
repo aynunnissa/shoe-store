@@ -1,4 +1,5 @@
 import { Grid } from "@mui/material";
+
 import CartCard from "../components/cart/cartCard";
 
 const Cart = () => {

@@ -1,3 +1,6 @@
+import { useDispatch } from "react-redux";
+import { cartActions } from "../store/cart";
+
 import {
   Card,
   CardActions,
@@ -7,7 +10,13 @@ import {
   Button,
 } from "@mui/material";
 
-const CartCard = () => {
+const CartCard = id => {
+  const dispatch = useDispatch();
+
+  function removeFromCartHandler() {
+    dispatch(cartActions.removeItemFromCart(id));
+  }
+
   return (
     <Card sx={{ display: "flex" }}>
       <CardMedia
@@ -26,7 +35,11 @@ const CartCard = () => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" sx={{ textTransform: "none" }}>
+        <Button
+          size="small"
+          onClick={removeFromCartHandler}
+          sx={{ textTransform: "none" }}
+        >
           Remove from Cart
         </Button>
       </CardActions>
