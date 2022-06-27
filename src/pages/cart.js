@@ -9,7 +9,7 @@ const Cart = () => {
   return (
     <Grid container p={4} spacing={2}>
       {cartItems?.map(item => (
-        <Grid item xs={6} md={12}>
+        <Grid item xs={12} md={6}>
           <CartCard item={item} />
         </Grid>
       ))}

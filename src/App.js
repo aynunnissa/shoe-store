@@ -10,8 +10,11 @@ function App() {
     <Layout>
       <Routes>
         <Route exact path="/" element={<Index />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="products">
+          <Route exact path="" element={<Products />} />
+          <Route path=":type" element={<Products />} />
+        </Route>
+        <Route exact path="/cart" element={<Cart />} />
       </Routes>
     </Layout>
   );

@@ -1,5 +1,7 @@
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart";
+import DefaultImg from "../../img/default.png";
 
 import {
   Card,
@@ -13,7 +15,17 @@ import {
 const CardItem = props => {
   const dispatch = useDispatch();
 
-  const { id, price, title, type } = props.product;
+  const { id, price, title, type, link } = props.product;
+
+  const [imgSrc, setImgSrc] = useState(DefaultImg || link);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = link;
+    img.onload = () => {
+      setImgSrc(link);
+    };
+  }, [link]);
 
   function addToCartHandler() {
     dispatch(
@@ -23,6 +35,7 @@ const CardItem = props => {
         quantity: 1,
         title: title,
         type: type,
+        link: link,
       })
     );
   }
@@ -31,18 +44,22 @@ const CardItem = props => {
     <Card sx={{ width: "100%" }}>
       <CardMedia
         component="img"
-        height="140"
-        image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-        alt="shoes 1"
+        width="100%"
+        height="auto"
+        image={imgSrc}
+        alt={title}
+        loading="eager"
+        sizes="(max-width: 959px) 318px, (max-width: 959px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) 592px, (min-width: 960px) 592px"
+        sx={{ background: "rgb(245, 245, 245)" }}
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography variant="h6" component="h6">
           {title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="caption" component="p" color="text.secondary">
           {type}
         </Typography>
-        <Typography variant="subtitle1" sx={{ color: "red" }}>
+        <Typography variant="subtitle1" component="p">
           Rp{Number(price).toLocaleString()}
         </Typography>
       </CardContent>
