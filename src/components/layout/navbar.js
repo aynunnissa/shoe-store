@@ -31,7 +31,7 @@ const Navbar = () => {
         px={4}
       >
         <Box sx={{ height: "80%", width: "auto" }}>
-          <NavLink to="/cart">
+          <NavLink to="/">
             <CheckIcon sx={{ height: "100%", width: "100%" }} />
           </NavLink>
         </Box>
