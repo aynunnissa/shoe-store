@@ -1,11 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { Box, Typography, Badge, Paper, Grid, Stack } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CheckIcon from "@mui/icons-material/Check";
 
+import styles from "./navbar.module.css";
+
 const Navbar = () => {
+  const { type } = useParams();
   const cartQuantity = useSelector(state => state.cart.totalQuantity); // read values from store & subscribes to updates
 
   return (
@@ -33,11 +36,26 @@ const Navbar = () => {
         </Box>
         <Box sx={{ flexGrow: "1" }}>
           <Stack direction="row" spacing={2} justifyContent="center">
-            <NavLink to="/products/lifestyle">Lifestyle</NavLink>
-            <NavLink to="/products/athletics">Athletics</NavLink>
-            <NavLink to="/products/basketball">Basketball</NavLink>
-            <NavLink to="/products/football">Football</NavLink>
-            <NavLink to="/products/gym-training">Gym and Training</NavLink>
+            <NavLink
+              className={
+                styles.navlink && (type === "lifestyle" ? styles.active : "")
+              }
+              to="/products/lifestyle"
+            >
+              Lifestyle
+            </NavLink>
+            <NavLink className={styles.navlink} to="/products/athletics">
+              Athletics
+            </NavLink>
+            <NavLink className={styles.navlink} to="/products/basketball">
+              Basketball
+            </NavLink>
+            <NavLink className={styles.navlink} to="/products/football">
+              Football
+            </NavLink>
+            <NavLink className={styles.navlink} to="/products/gym-training">
+              Gym and Training
+            </NavLink>
           </Stack>
         </Box>
         <Box>

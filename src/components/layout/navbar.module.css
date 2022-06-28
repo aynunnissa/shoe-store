@@ -1,0 +1,12 @@
+.navlink {
+    color: black;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+}
