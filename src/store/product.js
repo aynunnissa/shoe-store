@@ -122,17 +122,32 @@ const DUMMY_PRODUCT = [
 
 const initialProductState = {
   products: DUMMY_PRODUCT,
+  brands: ["Nike Sportswear", "Nike By You"],
+  types: ["lifestyle", "athletics", "basketball", "gym-training", "football"],
 };
-
 const productSlice = createSlice({
   name: "products",
   initialState: initialProductState,
   reducers: {
-    filterProducts(state, action) {
+    getProductsByType(state, action) {
       const { type } = action.payload;
       if (!type) {
         state.products = DUMMY_PRODUCT;
       } else state.products = DUMMY_PRODUCT.filter(item => item.type === type);
+    },
+    addFilterBrand(state, action) {
+      const { brandName } = action.payload;
+      const brandProducts = DUMMY_PRODUCT.filter(
+        item => item.brand === brandName
+      );
+      state.products.concat(brandProducts);
+    },
+    removeFilterBrand(state, action) {
+      const { brandName } = action.payload;
+      const notBrandProducts = state.products.filter(
+        item => item.brand !== brandName
+      );
+      state.products = notBrandProducts;
     },
   },
 });
