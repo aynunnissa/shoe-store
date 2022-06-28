@@ -1,4 +1,4 @@
-.navlink {
+.navlink, .breadLink {
     color: black;
     text-decoration: none;
 }
@@ -9,4 +9,12 @@
 
 .active {
     text-decoration: underline;
+}
+
+.inactive {
+    text-decoration: none;
+}
+
+.breadLink:hover {
+    color: #A5A5A5;
 }

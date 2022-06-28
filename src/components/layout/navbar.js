@@ -1,11 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import { Box, Typography, Badge, Paper, Grid, Stack } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CheckIcon from "@mui/icons-material/Check";
 
+import styles from "./navbar.module.css";
+
 const Navbar = () => {
+  const location = useLocation();
+  const type = location.pathname.split("/").pop();
   const cartQuantity = useSelector(state => state.cart.totalQuantity); // read values from store & subscribes to updates
 
   return (
@@ -33,11 +37,46 @@ const Navbar = () => {
         </Box>
         <Box sx={{ flexGrow: "1" }}>
           <Stack direction="row" spacing={2} justifyContent="center">
-            <NavLink to="/products/lifestyle">Lifestyle</NavLink>
-            <NavLink to="/products/athletics">Athletics</NavLink>
-            <NavLink to="/products/basketball">Basketball</NavLink>
-            <NavLink to="/products/football">Football</NavLink>
-            <NavLink to="/products/gym-training">Gym and Training</NavLink>
+            <NavLink
+              className={`${styles.navlink} ${
+                type === "lifestyle" ? styles.active : ""
+              }`}
+              to="/products/lifestyle"
+            >
+              Lifestyle
+            </NavLink>
+            <NavLink
+              className={`${styles.navlink} ${
+                type === "athletics" ? styles.active : ""
+              }`}
+              to="/products/athletics"
+            >
+              Athletics
+            </NavLink>
+            <NavLink
+              className={`${styles.navlink} ${
+                type === "basketball" ? styles.active : ""
+              }`}
+              to="/products/basketball"
+            >
+              Basketball
+            </NavLink>
+            <NavLink
+              className={`${styles.navlink} ${
+                type === "football" ? styles.active : ""
+              }`}
+              to="/products/football"
+            >
+              Football
+            </NavLink>
+            <NavLink
+              className={`${styles.navlink} ${
+                type === "gym-training" ? styles.active : ""
+              }`}
+              to="/products/gym-training"
+            >
+              Gym and Training
+            </NavLink>
           </Stack>
         </Box>
         <Box>

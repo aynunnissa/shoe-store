@@ -130,7 +130,9 @@ const productSlice = createSlice({
   reducers: {
     filterProducts(state, action) {
       const { type } = action.payload;
-      state.products = DUMMY_PRODUCT.filter(item => item.type === type);
+      if (!type) {
+        state.products = DUMMY_PRODUCT;
+      } else state.products = DUMMY_PRODUCT.filter(item => item.type === type);
     },
   },
 });

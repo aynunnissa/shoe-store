@@ -1,33 +1,40 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
-import { Grid, Box, Typography } from "@mui/material";
+import { useParams, useLocation, NavLink } from "react-router-dom";
+import { Grid, Box, Typography, Breadcrumbs } from "@mui/material";
 import CardItem from "../components/product/card";
-import Filter from "../products/filter";
 import { productActions } from "../store/product";
+import styles from "../components/layout/navbar.module.css";
 
 const Products = () => {
   const products = useSelector(state => state.products.products);
   const dispatch = useDispatch();
   const { type } = useParams();
-
-  const filterProduct = React.useCallback(() => {
-    if (type) {
-      dispatch(
-        productActions.filterProducts({
-          type: type,
-        })
-      );
-    }
-  }, [type, dispatch]);
+  const urls = useLocation().pathname.split("/");
 
   useEffect(() => {
-    filterProduct();
-  }, [filterProduct]);
+    dispatch(
+      productActions.filterProducts({
+        type: type,
+      })
+    );
+  }, [type, dispatch]);
 
   return (
     <Grid container sx={{ minHeight: "100vh" }} px={2} py={4} spacing={2}>
       <Grid item xs={12}>
+        <Breadcrumbs aria-label="breadcrumb">
+          <NavLink className={styles.breadLink} to={`/${urls[1]}`}>
+            <Typography variant="caption" component="p">
+              {urls[1]}
+            </Typography>
+          </NavLink>
+          <NavLink className={styles.breadLink} to={`/${urls[1]}/${urls[2]}`}>
+            <Typography variant="caption" component="p">
+              {urls[2]}
+            </Typography>
+          </NavLink>
+        </Breadcrumbs>
         <Typography variant="h5" component="h1">
           Men's {type ? type[0].toUpperCase() + type.slice(1) : ""} Shoes (
           {products.length})
@@ -37,8 +44,8 @@ const Products = () => {
         <Box>
           <Grid container spacing={2} p={2}>
             {products.map(product => (
-              <Grid item xs={6} sm={4} md={3}>
-                <CardItem key={product.id} product={product} />
+              <Grid item xs={6} sm={4} md={3} key={product.id}>
+                <CardItem product={product} />
               </Grid>
             ))}
           </Grid>

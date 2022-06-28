@@ -41,7 +41,7 @@ const CardItem = props => {
   }
 
   return (
-    <Card sx={{ width: "100%" }}>
+    <Card sx={{ width: "100%" }} elevation={0}>
       <CardMedia
         component="img"
         width="100%"
@@ -56,7 +56,12 @@ const CardItem = props => {
         <Typography variant="h6" component="h6">
           {title}
         </Typography>
-        <Typography variant="caption" component="p" color="text.secondary">
+        <Typography
+          variant="subtitle2"
+          gutterBottom
+          component="p"
+          color="text.secondary"
+        >
           {type}
         </Typography>
         <Typography variant="subtitle1" component="p">
