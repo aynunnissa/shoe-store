@@ -55,28 +55,20 @@ const CartCard = props => {
 
   return (
     <Card sx={{ position: "relative" }}>
-      <CardActions
+      <Button
+        size="small"
+        onClick={removeAllFromCartHandler}
         sx={{
+          textTransform: "none",
+          padding: "5px 0px",
+          minWidth: "fit-content",
           position: "absolute",
           top: 0,
-          right: 0,
-          padding: 0,
+          right: "10px",
         }}
       >
-        <Button
-          size="small"
-          onClick={removeAllFromCartHandler}
-          sx={{
-            textTransform: "none",
-            padding: "5px 0px",
-            borderRadius: "0px 0px 0px 50px",
-          }}
-          variant="contained"
-          color="error"
-        >
-          <ClearIcon />
-        </Button>
-      </CardActions>
+        <ClearIcon color="error" />
+      </Button>
       <Box sx={{ display: "flex", alignItems: "center" }} px={2}>
         <CardMedia
           component="img"

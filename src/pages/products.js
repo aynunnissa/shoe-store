@@ -21,20 +21,22 @@ const Products = () => {
   }, [type, dispatch]);
 
   return (
-    <Grid container sx={{ minHeight: "100vh" }} px={2} py={4} spacing={2}>
+    <Grid container sx={{ minHeight: "100vh" }} px={4} py={4} spacing={2}>
       <Grid item xs={12}>
-        <Breadcrumbs aria-label="breadcrumb">
-          <NavLink className={styles.breadLink} to={`/${urls[1]}`}>
-            <Typography variant="caption" component="p">
-              {urls[1]}
-            </Typography>
-          </NavLink>
-          <NavLink className={styles.breadLink} to={`/${urls[1]}/${urls[2]}`}>
-            <Typography variant="caption" component="p">
-              {urls[2]}
-            </Typography>
-          </NavLink>
-        </Breadcrumbs>
+        {urls.length > 2 && (
+          <Breadcrumbs aria-label="breadcrumb">
+            <NavLink className={styles.breadLink} to={`/${urls[1]}`}>
+              <Typography variant="caption" component="p">
+                {urls[1]}
+              </Typography>
+            </NavLink>
+            <NavLink className={styles.breadLink} to={`/${urls[1]}/${urls[2]}`}>
+              <Typography variant="caption" component="p">
+                {urls[2]}
+              </Typography>
+            </NavLink>
+          </Breadcrumbs>
+        )}
         <Typography variant="h5" component="h1">
           Men's {type ? type[0].toUpperCase() + type.slice(1) : ""} Shoes (
           {products.length})

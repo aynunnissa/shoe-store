@@ -52,7 +52,7 @@ const CardItem = props => {
         sizes="(max-width: 959px) 318px, (max-width: 959px) and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) 592px, (min-width: 960px) 592px"
         sx={{ background: "rgb(245, 245, 245)" }}
       />
-      <CardContent>
+      <CardContent sx={{ paddingBottom: 0, paddingLeft: "8px" }}>
         <Typography variant="h6" component="h6">
           {title}
         </Typography>
@@ -72,7 +72,7 @@ const CardItem = props => {
         <Button
           size="small"
           onClick={addToCartHandler}
-          sx={{ textTransform: "none" }}
+          sx={{ textTransform: "none", paddingLeft: "0" }}
         >
           Add to Cart
         </Button>

@@ -7,9 +7,9 @@ const Cart = () => {
   const cartItems = useSelector(state => state.cart.items);
 
   return (
-    <Grid container p={4} spacing={2}>
+    <Grid container p={4} spacing={2} columns={18}>
       {cartItems?.map(item => (
-        <Grid item xs={12} md={6}>
+        <Grid item xs={18} sm={9} md={6} key={item}>
           <CartCard item={item} />
         </Grid>
       ))}
