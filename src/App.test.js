@@ -1,8 +1,23 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import Home from "../src/pages/index";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/View All Products/i);
-  expect(linkElement).toBeInTheDocument();
+describe("Homepage", () => {
+  test("renders call to action button", () => {
+    render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    );
+    expect(screen.getByRole("button")).toBeInTheDocument();
+  });
+  test("renders call to action text", () => {
+    render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    );
+    // getByTest can throw error by default, but this is better
+    expect(screen.getAllByText("Shop now")).toHaveLength(2);
+  });
 });
