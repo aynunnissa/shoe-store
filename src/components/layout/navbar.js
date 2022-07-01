@@ -2,7 +2,15 @@ import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-import { Box, Typography, Badge, Paper, Grid, Stack } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Badge,
+  Paper,
+  Grid,
+  Stack,
+  Button,
+} from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -32,11 +40,16 @@ const Navbar = ({ changeMobileNavState }) => {
     },
   }));
 
-  const Hamburger = styled(Box)(() => ({
+  const Hamburger = styled(Button)(() => ({
     display: "none",
     height: "24px",
+    minWidth: "fit-content",
+    color: "black",
     width: "24px",
     position: "relative",
+    padding: 0,
+    backgroundColor: "transparent",
+    border: "none",
 
     [theme.breakpoints.down("md")]: {
       display: "block",
@@ -172,13 +185,17 @@ const Navbar = ({ changeMobileNavState }) => {
                 <ShoppingCartIcon />
               </Badge>
             </NavLink>
-            <Hamburger onClick={handleOpenNav}>
-              {isOpenNav ? (
-                <CloseIcon sx={{ position: "fixed", zIndex: 1001 }} />
-              ) : (
+            {isOpenNav ? (
+              <Hamburger onClick={handleOpenNav}>
+                <CloseIcon
+                  sx={{ position: "absolute", zIndex: 1001, top: 0, right: 0 }}
+                />
+              </Hamburger>
+            ) : (
+              <Hamburger onClick={handleOpenNav}>
                 <MenuIcon />
-              )}
-            </Hamburger>
+              </Hamburger>
+            )}
           </Box>
         </Box>
       </Paper>
