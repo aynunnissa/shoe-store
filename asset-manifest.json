@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.7e421efc.css",
-    "main.js": "/static/js/main.4b0e8537.js",
-    "static/js/787.54b6a899.chunk.js": "/static/js/787.54b6a899.chunk.js",
-    "static/media/home.jpg": "/static/media/home.35ba2c8dd8524fca9625.jpg",
-    "static/media/custom-nike-vaporfly-next-2-by-you(mens-athletic).jpg": "/static/media/custom-nike-vaporfly-next-2-by-you(mens-athletic).21f57992b6a6011f8125.jpg",
-    "static/media/custom-nike-mercurial-vapor-14-academy-by-you(mens-football).jpg": "/static/media/custom-nike-mercurial-vapor-14-academy-by-you(mens-football).1831d5a53af04c09696e.jpg",
-    "static/media/air-max-97-se-shoes-Qt2gjv(mens-sportswear-lifestyle-shoes-1).jpg": "/static/media/air-max-97-se-shoes-Qt2gjv(mens-sportswear-lifestyle-shoes-1).41000824112280d0b389.jpg",
-    "static/media/custom-nike-phantom-gt-elite-by-you(mens-football).jpg": "/static/media/custom-nike-phantom-gt-elite-by-you(mens-football).df9d60ca5dca3263ec50.jpg",
-    "static/media/custom-nike-mercurial-superfly-8-elite-by-you(mens-football).jpg": "/static/media/custom-nike-mercurial-superfly-8-elite-by-you(mens-football).f5dfd41a47bb230b7dcc.jpg",
-    "static/media/air-trainer-1-sp-shoes-6QJXK2(mens-sportwear-basketball).jpg": "/static/media/air-trainer-1-sp-shoes-6QJXK2(mens-sportwear-basketball).6db1a165c5bb516a6cde.jpg",
-    "static/media/custom-nike-kyrie-infinity-by-you(mens-basketball).jpg": "/static/media/custom-nike-kyrie-infinity-by-you(mens-basketball).5c86114b9729d64da1a3.jpg",
-    "static/media/air-force-1-mid-off-white-shoes-7LDx46(mens-sportwear-basketball-1).jpg": "/static/media/air-force-1-mid-off-white-shoes-7LDx46(mens-sportwear-basketball-1).ce9a917c8586de7ef0b4.jpg",
-    "static/media/custom-nike-internationalist-low-by-you(mens-byYou-lifestyle-shoes-1).jpg": "/static/media/custom-nike-internationalist-low-by-you(mens-byYou-lifestyle-shoes-1).04f96e06fe9e6312296d.jpg",
-    "static/media/custom-nike-metcon-7-by-you(mens-traingym).jpg": "/static/media/custom-nike-metcon-7-by-you(mens-traingym).71287d6a677cdd6a4fb8.jpg",
-    "static/media/air-force-1-react-shoe-7gcHDc(mens-sportswear-lifestyle-shoes).jpg": "/static/media/air-force-1-react-shoe-7gcHDc(mens-sportswear-lifestyle-shoes).768770e97e6a9414d353.jpg",
-    "static/media/custom-nike-zoom-freak-3-by-you(mens-basketball).jpg": "/static/media/custom-nike-zoom-freak-3-by-you(mens-basketball).94a6fbda9f0a522a6e94.jpg",
-    "static/media/custom-nike-blazer-mid-77-by-you(mens-byYou-lifestyle-shoes-2).jpg": "/static/media/custom-nike-blazer-mid-77-by-you(mens-byYou-lifestyle-shoes-2).8d7f28110c539e83e928.jpg",
-    "index.html": "/index.html",
-    "main.7e421efc.css.map": "/static/css/main.7e421efc.css.map",
-    "main.4b0e8537.js.map": "/static/js/main.4b0e8537.js.map",
-    "787.54b6a899.chunk.js.map": "/static/js/787.54b6a899.chunk.js.map"
+    "main.css": "/shoe-store/static/css/main.7e421efc.css",
+    "main.js": "/shoe-store/static/js/main.dde9d28b.js",
+    "static/js/787.54b6a899.chunk.js": "/shoe-store/static/js/787.54b6a899.chunk.js",
+    "static/media/home.jpg": "/shoe-store/static/media/home.35ba2c8dd8524fca9625.jpg",
+    "static/media/custom-nike-vaporfly-next-2-by-you(mens-athletic).jpg": "/shoe-store/static/media/custom-nike-vaporfly-next-2-by-you(mens-athletic).21f57992b6a6011f8125.jpg",
+    "static/media/custom-nike-mercurial-vapor-14-academy-by-you(mens-football).jpg": "/shoe-store/static/media/custom-nike-mercurial-vapor-14-academy-by-you(mens-football).1831d5a53af04c09696e.jpg",
+    "static/media/air-max-97-se-shoes-Qt2gjv(mens-sportswear-lifestyle-shoes-1).jpg": "/shoe-store/static/media/air-max-97-se-shoes-Qt2gjv(mens-sportswear-lifestyle-shoes-1).41000824112280d0b389.jpg",
+    "static/media/custom-nike-phantom-gt-elite-by-you(mens-football).jpg": "/shoe-store/static/media/custom-nike-phantom-gt-elite-by-you(mens-football).df9d60ca5dca3263ec50.jpg",
+    "static/media/custom-nike-mercurial-superfly-8-elite-by-you(mens-football).jpg": "/shoe-store/static/media/custom-nike-mercurial-superfly-8-elite-by-you(mens-football).f5dfd41a47bb230b7dcc.jpg",
+    "static/media/air-trainer-1-sp-shoes-6QJXK2(mens-sportwear-basketball).jpg": "/shoe-store/static/media/air-trainer-1-sp-shoes-6QJXK2(mens-sportwear-basketball).6db1a165c5bb516a6cde.jpg",
+    "static/media/custom-nike-kyrie-infinity-by-you(mens-basketball).jpg": "/shoe-store/static/media/custom-nike-kyrie-infinity-by-you(mens-basketball).5c86114b9729d64da1a3.jpg",
+    "static/media/air-force-1-mid-off-white-shoes-7LDx46(mens-sportwear-basketball-1).jpg": "/shoe-store/static/media/air-force-1-mid-off-white-shoes-7LDx46(mens-sportwear-basketball-1).ce9a917c8586de7ef0b4.jpg",
+    "static/media/custom-nike-internationalist-low-by-you(mens-byYou-lifestyle-shoes-1).jpg": "/shoe-store/static/media/custom-nike-internationalist-low-by-you(mens-byYou-lifestyle-shoes-1).04f96e06fe9e6312296d.jpg",
+    "static/media/custom-nike-metcon-7-by-you(mens-traingym).jpg": "/shoe-store/static/media/custom-nike-metcon-7-by-you(mens-traingym).71287d6a677cdd6a4fb8.jpg",
+    "static/media/air-force-1-react-shoe-7gcHDc(mens-sportswear-lifestyle-shoes).jpg": "/shoe-store/static/media/air-force-1-react-shoe-7gcHDc(mens-sportswear-lifestyle-shoes).768770e97e6a9414d353.jpg",
+    "static/media/custom-nike-zoom-freak-3-by-you(mens-basketball).jpg": "/shoe-store/static/media/custom-nike-zoom-freak-3-by-you(mens-basketball).94a6fbda9f0a522a6e94.jpg",
+    "static/media/custom-nike-blazer-mid-77-by-you(mens-byYou-lifestyle-shoes-2).jpg": "/shoe-store/static/media/custom-nike-blazer-mid-77-by-you(mens-byYou-lifestyle-shoes-2).8d7f28110c539e83e928.jpg",
+    "index.html": "/shoe-store/index.html",
+    "main.7e421efc.css.map": "/shoe-store/static/css/main.7e421efc.css.map",
+    "main.dde9d28b.js.map": "/shoe-store/static/js/main.dde9d28b.js.map",
+    "787.54b6a899.chunk.js.map": "/shoe-store/static/js/787.54b6a899.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7e421efc.css",
-    "static/js/main.4b0e8537.js"
+    "static/js/main.dde9d28b.js"
   ]
 }
