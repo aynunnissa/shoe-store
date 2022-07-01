@@ -44,7 +44,7 @@ const Navbar = ({ changeMobileNavState }) => {
   }));
 
   return (
-    <Box>
+    <Box component="nav">
       <Box
         className={`${styles.layer} ${
           isOpenNav ? styles["layer--open"] : styles["layer--hidden"]
