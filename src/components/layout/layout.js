@@ -11,7 +11,8 @@ import {
 const Layout = props => {
   let theme = createTheme();
   theme = responsiveFontSizes(theme);
-  const url = useLocation().pathname.split("/")[1];
+  const listUrl = useLocation().pathname.split("/");
+  const url = listUrl[listUrl.length - 1];
 
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
 

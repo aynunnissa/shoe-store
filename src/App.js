@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Index from "./pages";
 import "./App.css";
 import Products from "./pages/products";
@@ -9,12 +9,15 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route exact path="/" element={<Index />} />
-        <Route path="products">
-          <Route exact path="" element={<Products />} />
-          <Route path=":type" element={<Products />} />
+        <Route path="shoe-store">
+          <Route exact path="/" element={<Index />} />
+          <Route path="products">
+            <Route exact path="" element={<Products />} />
+            <Route path=":type" element={<Products />} />
+          </Route>
+          <Route exact path="/cart" element={<Cart />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
-        <Route exact path="/cart" element={<Cart />} />
       </Routes>
     </Layout>
   );
