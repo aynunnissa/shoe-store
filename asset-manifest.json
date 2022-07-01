@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7e421efc.css",
-    "main.js": "/static/js/main.a1b6b94f.js",
+    "main.js": "/static/js/main.4b0e8537.js",
     "static/js/787.54b6a899.chunk.js": "/static/js/787.54b6a899.chunk.js",
     "static/media/home.jpg": "/static/media/home.35ba2c8dd8524fca9625.jpg",
     "static/media/custom-nike-vaporfly-next-2-by-you(mens-athletic).jpg": "/static/media/custom-nike-vaporfly-next-2-by-you(mens-athletic).21f57992b6a6011f8125.jpg",
@@ -19,11 +19,11 @@
     "static/media/custom-nike-blazer-mid-77-by-you(mens-byYou-lifestyle-shoes-2).jpg": "/static/media/custom-nike-blazer-mid-77-by-you(mens-byYou-lifestyle-shoes-2).8d7f28110c539e83e928.jpg",
     "index.html": "/index.html",
     "main.7e421efc.css.map": "/static/css/main.7e421efc.css.map",
-    "main.a1b6b94f.js.map": "/static/js/main.a1b6b94f.js.map",
+    "main.4b0e8537.js.map": "/static/js/main.4b0e8537.js.map",
     "787.54b6a899.chunk.js.map": "/static/js/787.54b6a899.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7e421efc.css",
-    "static/js/main.a1b6b94f.js"
+    "static/js/main.4b0e8537.js"
   ]
 }
